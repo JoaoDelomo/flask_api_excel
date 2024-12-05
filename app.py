@@ -124,7 +124,7 @@ def generate_attendant_pdf(id):
     }
 
     # Gerar o PDF
-    arquivo_entrada = "./pdfs/modelo_sem_links_corrigido.pdf"
+    arquivo_entrada = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pdfs', 'modelo_sem_links_corrigido.pdf')
     arquivo_saida = f"./pdfs/attendant_{id}_pag3.pdf"
     if not os.path.exists("./pdfs"):
         os.makedirs("./pdfs")
